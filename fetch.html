@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cat Breeds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+    #catImage, #catImage1{
+            width: 400px;
+            height:400px;
+            object-fit:  cover;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
+            justify-content: space-evenly;
+        }
+        #fetchButton , #fetchButton1{
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #fetchButton:hover , #fetchButton1:hover{
+            background-color: #45a049;
+        }
+    .loading,.loading1 {
+            font-size: 18px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cat fetching from github</h1>
+        <div id="loading1" class="loading1" style="visibility: hidden;">Loading...</div>
+        <div>
+            <img id="catImage1" src="" alt="Cat Image from Github" style="display:none;">
+        </div>
+        <button id="fetchButton1">Fetch Cat from GitHub</button>
+    <hr>
+ 
+    
+    <script src="fetch1.js"></script>
+</body>
+</html>
