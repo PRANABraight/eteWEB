@@ -1,5 +1,4 @@
-// Base URL for The Cat API (Insert your API key)
-const baseURL = " https://api.thecatapi.com/v1/images/search?limit=10";
+const baseURL = "https://github.com/PRANABraight/eteWEB/blob/main/greece.json";
 
 window.onload = () => {
     const fetchButton = document.getElementById("fetchButton1");
@@ -17,6 +16,7 @@ window.onload = () => {
             // Display the image
             if (data.length > 0) {
                 catImage.src = data[0].url;
+                let catName = data[0].name
                 catImage.style.display = "block";
             }
         } catch (error) {
