@@ -24,7 +24,7 @@ h1, h2, p {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.7); /* Slight overlay for better readability */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     border-radius: 10px;
 }

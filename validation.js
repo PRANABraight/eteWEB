@@ -60,7 +60,7 @@ window.onload = () => {
 
         // Validate Password
         if (password.length < 8) {
-            document.getElementById("passwordError").textContent = "Password must be at least 6 characters long.";
+            document.getElementById("passwordError").textContent = "Password must be at least 8 characters long.";
             isValid = false;
         }
 

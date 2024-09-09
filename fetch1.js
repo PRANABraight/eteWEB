@@ -1,9 +1,9 @@
-const baseURL = "https://github.com/PRANABraight/eteWEB/blob/main/greece.json";
+const baseURL = "https://api.thecatapi.com/v1/images/search";
 
 window.onload = () => {
-    const fetchButton = document.getElementById("fetchButton1");
-    const catImage = document.getElementById("catImage1");
-    const loading = document.getElementById("loading1");
+    const fetchButton = document.getElementById("fetchButton");
+    const catImage = document.getElementById("catImage");
+    const loading = document.getElementById("loading");
 
     fetchButton.addEventListener("click", async () => {
         loading.style.display = "block";
@@ -16,11 +16,10 @@ window.onload = () => {
             // Display the image
             if (data.length > 0) {
                 catImage.src = data[0].url;
-                let catName = data[0].name
                 catImage.style.display = "block";
             }
         } catch (error) {
-            console.error("Error fetching the cat image from GutHub:", error);
+            console.error("Error fetching the cat image:", error);
             loading.textContent = "Failed to load image. Try again.";
         } finally {
             // Hide loading message after image loads
@@ -28,3 +27,4 @@ window.onload = () => {
         }
     });
 };
+
