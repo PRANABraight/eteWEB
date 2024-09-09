@@ -7,37 +7,53 @@
      <!-- Bootstrap 5 CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
+     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
+            font-family:Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        padding: 0;
+            background-color: whitesmoke;
         }
         .container {
             margin-top: 20px;
-        }
+         }
         .cat-info {
             display: none;
             margin-top: 20px;
             padding: 10px;
-            background-color: #fff;
+        background-color: whitesmoke;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
-        img {
-            max-width: 300px;
-            display: block;
-            margin-bottom: 10px;
+    #catImage, #catImage1{
+           width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            justify-content: space-evenly;
+        }
+        #fetchButton , #fetchButton1{
+           padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
         }
         #loading {
             display: none;
-            font-size: 18px;
+           font-size: 18px;
             color: #888;
         }
     </style>
 </head>
 <body>
        
+  
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -61,15 +77,15 @@
     </div>
 </nav>
 
-    <h1>Cat Breed Info</h1>
-    <button id="fetchButton">Fetch Cat Info</button>
+    <h1 class="text-center ">Cat Breed Info</h1>
+    <button id="fetchButton" class="bg-success text-white rounded-2 border-1 border-primary-subtle ">Fetch Cat Info</button>
     <p id="loading">Loading...</p>
 
     <div class="container">
         <div id="catInfo" class="cat-info">
             <img id="catImage" src="" alt="Cat Breed">
             <h2 id="catName"></h2>
-            <p><strong>Temperament:</strong> <span id="catTemperament"></span></p>
+            <p ><strong>Temperament:</strong> <span id="catTemperament"></span></p>
             <p><strong>Origin:</strong> <span id="catOrigin"></span></p>
             <p><strong>Description:</strong> <span id="catDescription"></span></p>
             <p><strong>Life Span:</strong> <span id="catLifeSpan"></span> years</p>
@@ -109,7 +125,7 @@
                         catLifeSpan.textContent = cat.life_span;
                         catImage.src = cat.url;
 
-                        // Display the cat info
+                        // Display tcat info
                         catInfo.style.display = "block";
                     }
                 } catch (error) {
