@@ -116,7 +116,7 @@
 
 
                     if (data.length > 0) {
-                        const cat = data[0]; 
+                        const cat = data[Math.floor(Math.random() * data.length)]; 
 
                     catName.textContent = cat.name;
                        catTemperament.textContent = cat.temperament;
